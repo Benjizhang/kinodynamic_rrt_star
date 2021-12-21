@@ -51,10 +51,13 @@ classdef rrtstar
             obj.R_ = R;
 
             state_dims = size(A,1);
-            obj.x0 = sym('x0',[state_dims,1]);
-            obj.x0 = sym(obj.x0, 'real');
-            obj.x1 = sym('x1',[state_dims,1]);
-            obj.x1 = sym(obj.x1, 'real');
+% % %             obj.x0 = sym('x0',[state_dims,1]);
+% % %             obj.x0 = sym(obj.x0, 'real');
+% % %             obj.x1 = sym('x1',[state_dims,1]);
+% % %             obj.x1 = sym(obj.x1, 'real');
+            obj.x0 = sym('x0',[state_dims,1], 'real');
+            obj.x1 = sym('x1',[state_dims,1], 'real');
+
 
             if ~exist('dist_idxs','var') || isempty(dist_idxs)
                 dist_idxs = 1:size(B,1);

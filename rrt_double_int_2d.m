@@ -1,3 +1,4 @@
+clear;clc;close all
 
 start = [2,2,0,0];
 goal  = [98,98,0,0];
